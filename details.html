@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html>
+<head> 
+<title>HTML change Name</title>
+
+<style type="text/css">
+         table.one {border-collapse:collapse;
+		 width:100%}
+        
+         
+         td.question {font-style:italic;
+           font-weight:bold;
+		   font-weight:bolder;
+         }
+		 
+      </style>
+ <script language="javascript" type="text/javascript">
+         function submit()
+		 {
+            alert("Thanks you for providing details");
+			document.write ("Thanks You");
+         }
+		 
+		 function DisplayNextQuestion(QNo)
+		 {
+		 sleep(1000)
+		switch(QNo)
+		{
+		case 'Q1':
+		
+		document.getElementById("Question2").style.display="table";
+		document.getElementById("Question1").style.display="none";
+		break;
+		case 'Q2':
+		document.getElementById("Question3").style.display="table";
+		document.getElementById("Question2").style.display="none";
+		break;
+		case 'Q3':
+		document.getElementById("Question4").style.display="table";
+		document.getElementById("Question3").style.display="none";
+		break;
+		case 'Q4':
+		document.getElementById("Question5").style.display="table";
+		document.getElementById("Question4").style.display="none";
+		break;
+		case 'Q5':
+		document.getElementById("comments").style.display="table";
+		document.getElementById("Question5").style.display="none";
+		break;
+		}
+		}
+		function sleep(delay) {
+        var start = new Date().getTime();
+        while (new Date().getTime() < start + delay);
+      }
+		</script>
+
+</head>
+<body>
+
+<h1><p align="center"> Heading </p></h1>
+<br/>
+<marquee>This link is avaiable till 10 PM  today</marquee>
+<table border="1" class="one">
+<tr>
+<th>plese click on play button </th>
+</tr>
+<tr>
+<td><embed src="F:\shankar swamy\WEB\Ayyo Ayyo1.mp3"  width="100%" height="100%" >
+   <noembed><img src="yourimage.gif" alt="Alternative Media" ></noembed>
+</embed></td>
+</tr>
+</table>
+<br />
+<p size="10">Your Name(optional): <input type="text" name="first_name"></p>
+<br/>
+<p align="center"> Please answer  below questions. You can not modify answers </p>
+<!-- Question 1 Table -->
+
+<table align="center" id="Question1">
+<tr><td class="question">questiondycfewgcywegwfcdwef  dgfewyfdywefdi hwe 1?</td></tr>
+<tr><td><input id="001" type="radio" name="Q1" value="Option1" onclick="DisplayNextQuestion('Q1')"><label for="001"> Option1</td></tr>
+<tr><td><input id="002"type="radio" name="Q1" value="Option2" onclick="DisplayNextQuestion('Q1')"><label for="002"> Option2</td></tr>
+</table>
+<!-- Question 2 Table -->
+<table align="center" style="display:none" id="Question2">
+<tr><td class="question">questiondycfewgcywegwfcdwef  dgfewyfdywefdi hwe 2?</td></tr>
+<tr><td><input  id="001"type="radio" name="Q2" value="Option1" onclick="DisplayNextQuestion('Q2')"><label for="001"> Option1</td></tr>
+<tr><td><input id="002"type="radio" name="Q2" value="Option2" onclick="DisplayNextQuestion('Q2')"><label for="002"> Option2</td></tr>
+</table>
+<!-- Question 3 Table -->
+<table align="center" style="display:none" id="Question3">
+<tr><td class="question">questiondycfewgcywegwfcdwef  dgfewyfdywefdi hwe 3?</td></tr>
+<tr><td><input id="001"  type="radio" name="Q3" value="Option1" onclick="DisplayNextQuestion('Q3')"><label for="001"> Option1</td></tr>
+<tr><td><input id="002" type="radio" name="Q3" value="Option2" onclick="DisplayNextQuestion('Q3')"><label for="002"> Option2</td></tr>
+</table>
+<!-- Question 4 Table -->
+<table align="center" style="display:none" id="Question4">
+<tr><td class="question">questiondycfewgcywegwfcdwef  dgfewyfdywefdi hwe 4?</td></tr>
+<tr><td><input id="001" type="radio" name="Q4" value="Option1" onclick="DisplayNextQuestion('Q4')"><label for="001"> Option1</td></tr>
+<tr><td><input id="002" type="radio" name="Q4" value="Option2" onclick="DisplayNextQuestion('Q4')"><label for="002"> Option2</td></tr>
+</table>
+<!-- Question 5 Table -->
+<table align="center" style="display:none" id="Question5">
+<tr><td class="question">questiondycfewgcywegwfcdwef  dgfewyfdywefdi hwe 5?</td></tr>
+<tr><td><input  id="001" type="radio" name="Q5" value="Option1" onclick="DisplayNextQuestion('Q5')"><label for="001"> Option1</td></tr>
+<tr><td><input id="002" type="radio" name="Q5" value="Option2" onclick="DisplayNextQuestion('Q5')"><label for="002"> Option2</td></tr>
+</table>
+<!-- Comments Text box  -->
+
+<table align="Center" style="display:none" id="comments">
+<tr><td class="question">Comments</td></tr>
+<tr><td><textarea rows="4" cols="50">please provide your feed back 
+</textarea></td></tr>
+<tr><td><input align="center" type="button" name="submit" value="Submit" onclick="submit()" /></td></tr>
+</table>
+</table>
+
+
+
+
+</body>
+</html>
