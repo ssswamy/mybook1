@@ -5,7 +5,7 @@ Dim objCon, strExlFile, strSQLStatement, Name, Comments
 Set objCon = CreateObject("ADODB.Connection")
 
 
-strExlFile = "../Database.xls"
+strExlFile = "../mybook1/Database.xls"
 
 objCon.Open "DRIVER={Microsoft Excel Driver (*.xls)};DBQ=" &strExlFile & ";Readonly=False"
 
