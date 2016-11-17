@@ -5,13 +5,13 @@ Dim objCon, strExlFile, strSQLStatement, Name, Comments,RS
 Set objCon = CreateObject("ADODB.Connection")
 Set RS= CreateObject("ADODB.recordset")
 
+Name=UserNameTx.value
+comments=commentstx.value
+msgbox Name &vblf& comments
 strExlFile = "../mybook1/Database.xls"
 
 objCon.Open "DRIVER={Microsoft Excel Driver (*.xls)};DBQ=" &strExlFile & ";Readonly=False"
 
-Name=UserNameTx.value
-comments=commentstx.value
-msgbox Name &vblf& comments
 
 strSQLStatement = "Insert Into [Data$] (Name,Comments) values('" & Name &"', '"& comments &"')"
 objCon.execute strSQLStatement
