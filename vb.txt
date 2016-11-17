@@ -3,7 +3,7 @@ Function DBtest()
 Dim objCon, strExlFile, strSQLStatement, Name, Comments,RS
 
 Set objCon = CreateObject("ADODB.Connection")
-Set RS= CreateObject("ADODB.recordset")
+'Set RS= CreateObject("ADODB.recordset")
 
 Name=UserNameTx.value
 comments=commentstx.value
@@ -15,8 +15,8 @@ objCon.Open "DRIVER={Microsoft Excel Driver (*.xls)};DBQ=" &strExlFile & ";Reado
 
 strSQLStatement = "Insert Into [Data$] (Name,Comments) values('" & Name &"', '"& comments &"')"
 objCon.execute strSQLStatement
-rs.open "select * from [Data$]", objCon
+'rs.open "select * from [Data$]", objCon
 
-msgbox objRecordSet.RecordCount
+'msgbox objRecordSet.RecordCount
 End function
 
