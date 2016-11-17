@@ -20,16 +20,3 @@ rs.open "select * from [Data$]", objCon
 msgbox objRecordSet.RecordCount
 End function
 
-' 2 function
-
-Function exceltest()
-Set objExcel = CreateObject("Excel.Application")
-Set objWorkbook = objExcel.Workbooks.Open("../mybook1/Database.xls")
-
-objExcel.Application.Visible = True
-objExcel.Workbooks.Add
-objExcel.Cells(1, 1).Value = "Test value"
-
-objExcel.ActiveWorkbook.Save "../mybook1/Database.xls"
-objExcel.ActiveWorkbook.Close
-end function
