@@ -16,7 +16,7 @@ objCon.Open "DRIVER={Microsoft Excel Driver (*.xls)};DBQ=" &strExlFile & ";Reado
 strSQLStatement = "Insert Into [Data$] (Name,Comments) values('" & Name &"', '"& comments &"')"
 objCon.execute strSQLStatement
 'rs.open "select * from [Data$]", objCon
-msgbox strExlFile &vblf& strSQLStatement
+'msgbox strExlFile &vblf& strSQLStatement
 'msgbox objRecordSet.RecordCount
 End function
 
