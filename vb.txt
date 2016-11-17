@@ -1,0 +1,19 @@
+Function DBtest()
+
+Dim objCon, strExlFile, strSQLStatement, Name, Comments
+
+Set objCon = CreateObject("ADODB.Connection")
+
+
+strExlFile = "F:\shankar swamy\WEB\Database.xls"
+
+objCon.Open "DRIVER={Microsoft Excel Driver (*.xls)};DBQ=" &strExlFile & ";Readonly=False"
+
+Name=UserNameTx.value
+comments=commentstx.value
+
+
+strSQLStatement = "Insert Into [Data$] (Name,Comments) values('" & Name &"', '"& comments &"')"
+objCon.execute strSQLStatement
+
+End function
