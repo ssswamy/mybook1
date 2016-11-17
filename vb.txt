@@ -1,5 +1,5 @@
 Function DBtest()
-
+msgbox "test"
 Dim objCon, strExlFile, strSQLStatement, Name, Comments
 
 Set objCon = CreateObject("ADODB.Connection")
